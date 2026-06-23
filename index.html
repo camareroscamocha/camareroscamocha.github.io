@@ -4,9 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Pedro Leblic | Página personal</title>
+  <title>Camareros Camocha | Servicio de barra para eventos en Madrid</title>
 
   <style>
+    :root {
+      --verde: #0b4a45;
+      --verde-oscuro: #06312e;
+      --verde-claro: #e7f1ef;
+      --beige: #f7f3ea;
+      --texto: #1f1f1f;
+      --gris: #666;
+      --blanco: #ffffff;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -19,135 +29,185 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4f4f4;
-      color: #1f1f1f;
+      background: var(--beige);
+      color: var(--texto);
       line-height: 1.6;
     }
 
     header {
-      background: #111;
-      color: white;
-      padding: 24px 8%;
+      width: 100%;
+      padding: 22px 8%;
+      background: rgba(247, 243, 234, 0.92);
+      backdrop-filter: blur(10px);
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
-      z-index: 10;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+      z-index: 20;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
     }
 
-    header h2 {
-      font-size: 22px;
-      letter-spacing: 1px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--verde);
+    }
+
+    .brand svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+      letter-spacing: 2px;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 15px;
     }
 
     nav a {
-      color: white;
       text-decoration: none;
-      margin-left: 22px;
+      color: var(--verde-oscuro);
+      margin-left: 26px;
       font-size: 15px;
-      opacity: 0.85;
+      font-weight: 600;
     }
 
     nav a:hover {
-      opacity: 1;
+      color: var(--verde);
     }
 
     .hero {
-      min-height: 85vh;
-      background: linear-gradient(135deg, #111 0%, #2e2e2e 100%);
-      color: white;
-      display: flex;
+      min-height: 88vh;
+      padding: 90px 8%;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
       align-items: center;
-      padding: 80px 8%;
+      background:
+        radial-gradient(circle at top right, rgba(11,74,69,0.16), transparent 35%),
+        linear-gradient(135deg, var(--beige) 0%, #ffffff 100%);
     }
 
-    .hero-content {
-      max-width: 850px;
+    .eyebrow {
+      color: var(--verde);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: 58px;
-      line-height: 1.1;
-      margin-bottom: 22px;
+      font-size: 62px;
+      line-height: 1.05;
+      color: var(--verde-oscuro);
+      margin-bottom: 24px;
+      max-width: 760px;
     }
 
     .hero p {
-      font-size: 21px;
-      color: #ddd;
-      margin-bottom: 32px;
-      max-width: 700px;
+      font-size: 20px;
+      color: #3d3d3d;
+      max-width: 650px;
+      margin-bottom: 34px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
     .btn {
       display: inline-block;
-      background: white;
-      color: #111;
-      padding: 14px 22px;
-      border-radius: 10px;
+      padding: 15px 22px;
+      border-radius: 999px;
       text-decoration: none;
-      font-weight: bold;
-      margin-right: 12px;
-      margin-top: 8px;
+      font-weight: 800;
       transition: 0.2s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    .btn.primary {
+      background: var(--verde);
+      color: white;
     }
 
     .btn.secondary {
       background: transparent;
+      color: var(--verde);
+      border: 1px solid var(--verde);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    }
+
+    .logo-card {
+      background: var(--verde);
       color: white;
-      border: 1px solid white;
+      border-radius: 34px;
+      padding: 52px 38px;
+      text-align: center;
+      box-shadow: 0 22px 60px rgba(6,49,46,0.25);
+    }
+
+    .logo-card svg {
+      width: 88px;
+      height: 88px;
+      margin-bottom: 28px;
+    }
+
+    .logo-card h2 {
+      font-size: 38px;
+      line-height: 1.08;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin-bottom: 18px;
+    }
+
+    .logo-line {
+      width: 58px;
+      height: 3px;
+      background: white;
+      margin: 0 auto 20px;
+      border-radius: 999px;
+      opacity: 0.85;
+    }
+
+    .logo-card p {
+      color: rgba(255,255,255,0.82);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: 700;
     }
 
     section {
-      padding: 80px 8%;
+      padding: 85px 8%;
       max-width: 1200px;
       margin: auto;
     }
 
-    section h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
+    .section-title {
+      color: var(--verde-oscuro);
+      font-size: 42px;
+      line-height: 1.1;
+      margin-bottom: 18px;
     }
 
     .section-intro {
-      font-size: 18px;
-      color: #555;
-      max-width: 780px;
-      margin-bottom: 35px;
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .about-box {
-      background: white;
-      padding: 34px;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    }
-
-    .about-box h3 {
-      margin-bottom: 16px;
-      font-size: 22px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #e9e9e9;
-      padding: 8px 12px;
-      border-radius: 999px;
-      margin: 6px 4px 0 0;
-      font-size: 14px;
+      color: var(--gris);
+      font-size: 19px;
+      max-width: 760px;
+      margin-bottom: 42px;
     }
 
     .grid {
@@ -158,139 +218,209 @@
 
     .card {
       background: white;
-      padding: 28px;
-      border-radius: 18px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      transition: 0.2s ease;
+      padding: 32px;
+      border-radius: 24px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.04);
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    .card span {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      background: var(--verde-claro);
+      color: var(--verde);
+      border-radius: 50%;
+      font-weight: 900;
+      margin-bottom: 22px;
     }
 
     .card h3 {
+      color: var(--verde-oscuro);
+      font-size: 23px;
       margin-bottom: 12px;
-      font-size: 22px;
     }
 
     .card p {
-      color: #555;
+      color: var(--gris);
     }
 
-    .experience {
+    .split {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .highlight-box {
+      background: var(--verde-oscuro);
+      color: white;
+      padding: 44px;
+      border-radius: 28px;
+    }
+
+    .highlight-box h2 {
+      font-size: 36px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .highlight-box p {
+      color: rgba(255,255,255,0.82);
+      font-size: 18px;
+      margin-bottom: 22px;
+    }
+
+    .list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .list-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
       background: white;
-      border-radius: 22px;
-      padding: 36px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 20px;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
     }
 
-    .experience-item {
-      margin-bottom: 24px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid #e5e5e5;
+    .check {
+      color: var(--verde);
+      font-weight: 900;
+      font-size: 20px;
     }
 
-    .experience-item:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
+    .process {
+      background: white;
+      max-width: none;
     }
 
-    .experience-item h3 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .experience-item p {
-      color: #555;
+    .process-inner {
+      max-width: 1200px;
+      margin: auto;
     }
 
     .contact {
-      background: #111;
-      color: white;
+      background: var(--verde);
       max-width: none;
+      color: white;
       text-align: center;
+      padding: 90px 8%;
     }
 
     .contact h2 {
-      color: white;
+      font-size: 44px;
+      margin-bottom: 18px;
     }
 
     .contact p {
-      color: #ddd;
-      font-size: 18px;
-      margin-bottom: 24px;
+      color: rgba(255,255,255,0.84);
+      font-size: 19px;
+      max-width: 720px;
+      margin: 0 auto 34px;
+    }
+
+    .contact-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .contact .btn.primary {
+      background: white;
+      color: var(--verde);
+    }
+
+    .contact .btn.secondary {
+      border-color: white;
+      color: white;
     }
 
     footer {
-      background: #050505;
-      color: #aaa;
+      background: var(--verde-oscuro);
+      color: rgba(255,255,255,0.7);
       text-align: center;
-      padding: 28px;
+      padding: 28px 8%;
       font-size: 14px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
       header {
         flex-direction: column;
-        gap: 14px;
-        text-align: center;
-      }
-
-      nav a {
-        margin: 0 8px;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 90px 8%;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 500px) {
-      header h2 {
-        font-size: 20px;
+        gap: 18px;
       }
 
       nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 16px;
       }
 
       nav a {
-        margin: 0;
-        font-size: 14px;
+        margin-left: 0;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 70px;
       }
 
       .hero h1 {
-        font-size: 36px;
+        font-size: 46px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .split {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 550px) {
+      header {
+        padding: 18px 6%;
+      }
+
+      .hero {
+        padding: 64px 6%;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 18px;
       }
 
       section {
-        padding: 60px 6%;
+        padding: 65px 6%;
       }
 
-      section h2 {
+      .section-title {
+        font-size: 34px;
+      }
+
+      .logo-card {
+        padding: 42px 26px;
+      }
+
+      .logo-card h2 {
         font-size: 30px;
+        letter-spacing: 3px;
+      }
+
+      .contact h2 {
+        font-size: 36px;
       }
     }
   </style>
@@ -299,12 +429,25 @@
 <body>
 
   <header>
-    <h2>Pedro Leblic</h2>
+    <a class="brand" href="#">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <path 
+          d="M31 12C23 12 18 18 18 26C18 36 27 42 34 43L40 43L40 78C40 83 44 87 50 87C56 87 60 83 60 78L60 43L66 43C73 42 82 36 82 26C82 18 77 12 69 12C61 12 58 19 50 19C42 19 39 12 31 12Z"
+          fill="#0b4a45"
+        />
+        <circle cx="50" cy="75" r="4" fill="#f7f3ea" />
+      </svg>
+
+      <div class="brand-text">
+        <span>Camareros</span>
+        <span>Camocha</span>
+      </div>
+    </a>
 
     <nav>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#experiencia">Experiencia</a>
+      <a href="#servicio">Servicio</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#como-funciona">Cómo funciona</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
@@ -312,135 +455,189 @@
   <main>
 
     <section class="hero">
-      <div class="hero-content">
-        <h1>Hola, soy Pedro Leblic.</h1>
+      <div>
+        <div class="eyebrow">Servicio de barra para eventos privados</div>
+
+        <h1>Camareros para que tú solo te preocupes de disfrutar.</h1>
 
         <p>
-          Estudiante de ADE y mercados financieros, con interés en controlling,
-          inversión, análisis financiero y desarrollo de proyectos empresariales.
+          En Camareros Camocha ofrecemos servicio de barra y camareros para fiestas,
+          reuniones familiares y eventos privados en Madrid. Un trato cercano, serio
+          y cuidado, sin complicarte con un catering completo.
         </p>
 
-        <a class="btn" href="#proyectos">Ver proyectos</a>
-        <a class="btn secondary" href="#contacto">Contactar</a>
+        <div class="buttons">
+          <a class="btn primary" href="#contacto">Pedir presupuesto</a>
+          <a class="btn secondary" href="#servicio">Ver servicio</a>
+        </div>
+      </div>
+
+      <div class="logo-card">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <path 
+            d="M31 12C23 12 18 18 18 26C18 36 27 42 34 43L40 43L40 78C40 83 44 87 50 87C56 87 60 83 60 78L60 43L66 43C73 42 82 36 82 26C82 18 77 12 69 12C61 12 58 19 50 19C42 19 39 12 31 12Z"
+            fill="#ffffff"
+          />
+          <circle cx="50" cy="75" r="4" fill="#0b4a45" />
+        </svg>
+
+        <h2>Camareros<br>Camocha</h2>
+        <div class="logo-line"></div>
+        <p>Barra · Eventos · Confianza</p>
       </div>
     </section>
 
-    <section id="sobre-mi">
-      <div class="about">
-        <div>
-          <h2>Sobre mí</h2>
-
-          <p class="section-intro">
-            Soy estudiante de Administración y Dirección de Empresas con formación
-            en mercados financieros. Me interesa entender cómo los datos, los números
-            y la estrategia ayudan a tomar mejores decisiones empresariales.
-          </p>
-
-          <p>
-            Actualmente estoy desarrollando experiencia en áreas como controlling,
-            análisis financiero, inversión y gestión de proyectos. Esta página reúne
-            una parte de mi perfil, intereses y trabajos.
-          </p>
-        </div>
-
-        <div class="about-box">
-          <h3>Áreas de interés</h3>
-
-          <span class="tag">Finanzas</span>
-          <span class="tag">Mercados</span>
-          <span class="tag">Empresa</span>
-          <span class="tag">Inversión</span>
-          <span class="tag">Controlling</span>
-          <span class="tag">Análisis financiero</span>
-          <span class="tag">Proyectos</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="proyectos">
-      <h2>Proyectos</h2>
+    <section id="servicio">
+      <h2 class="section-title">Servicio sencillo, cuidado y cercano.</h2>
 
       <p class="section-intro">
-        Aquí recojo algunas áreas de trabajo, intereses y proyectos personales
-        relacionados con finanzas, empresa y desarrollo profesional.
+        No somos un catering de comida. Nos centramos en lo que muchas veces falta
+        en un evento pequeño o mediano: una barra bien atendida, camareros responsables
+        y un servicio cómodo para los invitados.
       </p>
 
       <div class="grid">
         <div class="card">
-          <h3>Análisis financiero</h3>
+          <span>1</span>
+          <h3>Servicio de barra</h3>
           <p>
-            Trabajos y análisis relacionados con empresas cotizadas, valoración,
-            ratios financieros, mercados de renta variable y renta fija.
+            Atendemos la barra durante el evento, servimos bebidas, mantenemos el orden
+            y ayudamos a que los invitados estén bien atendidos.
           </p>
         </div>
 
         <div class="card">
-          <h3>Controlling y gestión</h3>
+          <span>2</span>
+          <h3>Camareros para reuniones</h3>
           <p>
-            Interés en el seguimiento de costes, presupuestos, reporting financiero
-            y apoyo a la toma de decisiones dentro de la empresa.
+            Si no necesitas una barra completa, también podemos ofrecer camareros para
+            apoyar en comidas, cenas, celebraciones familiares o encuentros privados.
           </p>
         </div>
 
         <div class="card">
-          <h3>Proyectos personales</h3>
+          <span>3</span>
+          <h3>Trato profesional</h3>
           <p>
-            Ideas y proyectos propios relacionados con empresa, inversión, tecnología,
-            deporte y emprendimiento.
+            Somos jóvenes, cercanos y con experiencia en caterings. Cuidamos la imagen,
+            la educación y la organización durante todo el servicio.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="experiencia">
-      <h2>Experiencia</h2>
-
-      <p class="section-intro">
-        Experiencias académicas y profesionales que han contribuido a desarrollar
-        mi capacidad de análisis, trabajo en equipo y resolución de problemas.
-      </p>
-
-      <div class="experience">
-        <div class="experience-item">
-          <h3>Formación en empresa y mercados financieros</h3>
+    <section id="eventos">
+      <div class="split">
+        <div class="highlight-box">
+          <h2>Para eventos donde no hace falta montar un gran catering.</h2>
           <p>
-            Estudios orientados a la administración de empresas, análisis financiero,
-            mercados de capitales, renta fija, renta variable y valoración empresarial.
+            Pensado para personas que organizan algo en casa, en una finca, en una terraza,
+            en una reunión familiar o en una celebración con amigos.
+          </p>
+          <p>
+            Nos adaptamos al tamaño del evento y al tipo de servicio que necesites.
           </p>
         </div>
 
-        <div class="experience-item">
-          <h3>Controlling y análisis de gestión</h3>
-          <p>
-            Interés en comprender cómo una empresa utiliza presupuestos, KPIs,
-            reporting y análisis de desviaciones para mejorar su toma de decisiones.
-          </p>
-        </div>
+        <div class="list">
+          <div class="list-item">
+            <div class="check">✓</div>
+            <div>
+              <h3>Fiestas privadas</h3>
+              <p>Celebraciones en casa, jardín, finca o local privado.</p>
+            </div>
+          </div>
 
-        <div class="experience-item">
-          <h3>Trabajo en equipo y responsabilidad</h3>
-          <p>
-            Experiencia en entornos exigentes donde la organización, la comunicación
-            y la capacidad de reacción son claves para sacar adelante el trabajo.
-          </p>
+          <div class="list-item">
+            <div class="check">✓</div>
+            <div>
+              <h3>Reuniones familiares</h3>
+              <p>Comidas, cenas, cumpleaños, aniversarios o encuentros especiales.</p>
+            </div>
+          </div>
+
+          <div class="list-item">
+            <div class="check">✓</div>
+            <div>
+              <h3>Eventos pequeños y medianos</h3>
+              <p>Eventos cuidados, sin necesidad de contratar un servicio enorme.</p>
+            </div>
+          </div>
+
+          <div class="list-item">
+            <div class="check">✓</div>
+            <div>
+              <h3>Servicio flexible</h3>
+              <p>Barra completa o simplemente camareros de apoyo según el evento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="process">
+      <div class="process-inner">
+        <h2 class="section-title">Cómo funciona</h2>
+
+        <p class="section-intro">
+          Queremos que contratar el servicio sea fácil. Nos cuentas qué necesitas,
+          vemos disponibilidad y te damos una propuesta sencilla.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <span>1</span>
+            <h3>Nos cuentas el evento</h3>
+            <p>
+              Fecha, lugar, número aproximado de personas, horario y si necesitas barra,
+              camareros o ambas cosas.
+            </p>
+          </div>
+
+          <div class="card">
+            <span>2</span>
+            <h3>Preparamos la propuesta</h3>
+            <p>
+              Te indicamos disponibilidad, número de camareros recomendado y presupuesto
+              orientado al tipo de servicio.
+            </p>
+          </div>
+
+          <div class="card">
+            <span>3</span>
+            <h3>Nos encargamos del servicio</h3>
+            <p>
+              Llegamos al evento, nos organizamos y atendemos la barra o a los invitados
+              con seriedad y buen trato.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="contacto" class="contact">
-      <h2>Contacto</h2>
+      <h2>¿Tienes un evento en Madrid?</h2>
 
       <p>
-        Puedes escribirme por email para cualquier consulta, oportunidad o colaboración.
+        Escríbenos y cuéntanos qué estás organizando. Te responderemos con disponibilidad
+        y una propuesta adaptada al evento.
       </p>
 
-      <a class="btn" href="mailto:leblicpedro@gmail.com">Enviar email</a>
+      <div class="contact-actions">
+        <a class="btn primary" href="mailto:camareroscamocha@gmail.com">
+          Enviar email
+        </a>
+
+        <a class="btn secondary" href="https://wa.me/34600000000" target="_blank">
+          Escribir por WhatsApp
+        </a>
+      </div>
     </section>
 
   </main>
 
   <footer>
-    <p>© 2026 Pedro Leblic. Página creada con GitHub Pages.</p>
+    <p>© 2026 Camareros Camocha · Servicio de barra y camareros para eventos privados en Madrid</p>
   </footer>
 
 </body>
