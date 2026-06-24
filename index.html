@@ -51,17 +51,17 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       text-decoration: none;
       color: var(--verde);
     }
 
-    .opener-icon {
-      width: 28px;
+    .opener-logo {
+      width: 34px;
       height: 46px;
-      flex-shrink: 0;
-      color: var(--verde);
+      object-fit: contain;
       display: block;
+      mix-blend-mode: multiply;
     }
 
     .brand-text {
@@ -444,6 +444,11 @@
         padding: 18px 6%;
       }
 
+      .opener-logo {
+        width: 30px;
+        height: 42px;
+      }
+
       .hero {
         padding: 58px 6% 0;
         min-height: 760px;
@@ -491,9 +496,7 @@
 
   <header>
     <a class="brand" href="#">
-      <svg class="opener-icon" viewBox="0 0 80 140" aria-hidden="true">
-        <path fill="currentColor" fill-rule="evenodd" d="M28 4C16.4 4 7 13.4 7 25v14c0 15.1 10.8 27.8 25 30.8V112H22.5c-1.7 0-3 1.3-3 3v5c0 1.7 1.3 3 3 3h35c1.7 0 3-1.3 3-3v-5c0-1.7-1.3-3-3-3H48V69.8c14.2-3 25-15.7 25-30.8V25C73 13.4 63.6 4 52 4H28Zm6 18h12c6.1 0 11 4.9 11 11v5c0 6.1-4.9 11-11 11H34c-6.1 0-11-4.9-11-11v-5c0-6.1 4.9-11 11-11Zm-1.3 10C28.4 32 25 35.4 25 39.7v1.6c0 4.3 3.4 7.7 7.7 7.7H38l8.1-9.1c1.1-1.2 2.7-1.9 4.3-1.9H55v-5.3c0-1.5-1.2-2.7-2.7-2.7H32.7ZM40 87.5A7.5 7.5 0 1 0 40 102.5 7.5 7.5 0 0 0 40 87.5Z"/>
-      </svg>
+      <img class="opener-logo" src="opener-logo.png" alt="Abridor Camareros Camocha" />
 
       <div class="brand-text">
         <span>Camareros</span>
@@ -532,16 +535,6 @@
 
       <div class="hero-bg" aria-hidden="true">
         <img src="hero-camocha.png" alt="" />
-      </div>
-
-      <div class="logo-card">
-        <svg class="opener-icon" viewBox="0 0 80 140" aria-hidden="true">
-          <path fill="currentColor" fill-rule="evenodd" d="M28 4C16.4 4 7 13.4 7 25v14c0 15.1 10.8 27.8 25 30.8V112H22.5c-1.7 0-3 1.3-3 3v5c0 1.7 1.3 3 3 3h35c1.7 0 3-1.3 3-3v-5c0-1.7-1.3-3-3-3H48V69.8c14.2-3 25-15.7 25-30.8V25C73 13.4 63.6 4 52 4H28Zm6 18h12c6.1 0 11 4.9 11 11v5c0 6.1-4.9 11-11 11H34c-6.1 0-11-4.9-11-11v-5c0-6.1 4.9-11 11-11Zm-1.3 10C28.4 32 25 35.4 25 39.7v1.6c0 4.3 3.4 7.7 7.7 7.7H38l8.1-9.1c1.1-1.2 2.7-1.9 4.3-1.9H55v-5.3c0-1.5-1.2-2.7-2.7-2.7H32.7ZM40 87.5A7.5 7.5 0 1 0 40 102.5 7.5 7.5 0 0 0 40 87.5Z"/>
-        </svg>
-
-        <h2>Camareros<br>Camocha</h2>
-        <div class="logo-line"></div>
-        <p>Barra · Bebidas · Servicio</p>
       </div>
     </section>
 
