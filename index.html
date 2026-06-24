@@ -51,14 +51,14 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       text-decoration: none;
       color: var(--verde);
     }
 
     .opener-icon {
-      width: 56px;
-      height: 32px;
+      width: 28px;
+      height: 46px;
       flex-shrink: 0;
       color: var(--verde);
       display: block;
@@ -264,6 +264,16 @@
       border-radius: 50%;
       font-weight: 900;
       margin-bottom: 22px;
+    }
+
+    .card span svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .card h3 {
@@ -481,33 +491,8 @@
 
   <header>
     <a class="brand" href="#">
-      <svg class="opener-icon" viewBox="0 0 96 48" aria-hidden="true" fill="none">
-        <path 
-          d="M14 24C14 14.6 21.6 7 31 7H74C80.6 7 86 12.4 86 19V29C86 35.6 80.6 41 74 41H31C21.6 41 14 33.4 14 24Z" 
-          stroke="currentColor" 
-          stroke-width="4" 
-          stroke-linejoin="round"
-        />
-        <circle 
-          cx="31" 
-          cy="24" 
-          r="7" 
-          stroke="currentColor" 
-          stroke-width="4"
-        />
-        <path 
-          d="M57 17H75C78 17 79.6 20.5 77.6 22.7L71 30H57" 
-          stroke="currentColor" 
-          stroke-width="4" 
-          stroke-linecap="round" 
-          stroke-linejoin="round"
-        />
-        <path 
-          d="M62 30H75" 
-          stroke="currentColor" 
-          stroke-width="4" 
-          stroke-linecap="round"
-        />
+      <svg class="opener-icon" viewBox="0 0 80 140" aria-hidden="true">
+        <path fill="currentColor" fill-rule="evenodd" d="M28 4C16.4 4 7 13.4 7 25v14c0 15.1 10.8 27.8 25 30.8V112H22.5c-1.7 0-3 1.3-3 3v5c0 1.7 1.3 3 3 3h35c1.7 0 3-1.3 3-3v-5c0-1.7-1.3-3-3-3H48V69.8c14.2-3 25-15.7 25-30.8V25C73 13.4 63.6 4 52 4H28Zm6 18h12c6.1 0 11 4.9 11 11v5c0 6.1-4.9 11-11 11H34c-6.1 0-11-4.9-11-11v-5c0-6.1 4.9-11 11-11Zm-1.3 10C28.4 32 25 35.4 25 39.7v1.6c0 4.3 3.4 7.7 7.7 7.7H38l8.1-9.1c1.1-1.2 2.7-1.9 4.3-1.9H55v-5.3c0-1.5-1.2-2.7-2.7-2.7H32.7ZM40 87.5A7.5 7.5 0 1 0 40 102.5 7.5 7.5 0 0 0 40 87.5Z"/>
       </svg>
 
       <div class="brand-text">
@@ -550,33 +535,8 @@
       </div>
 
       <div class="logo-card">
-        <svg class="opener-icon" viewBox="0 0 96 48" aria-hidden="true" fill="none">
-          <path 
-            d="M14 24C14 14.6 21.6 7 31 7H74C80.6 7 86 12.4 86 19V29C86 35.6 80.6 41 74 41H31C21.6 41 14 33.4 14 24Z" 
-            stroke="currentColor" 
-            stroke-width="4" 
-            stroke-linejoin="round"
-          />
-          <circle 
-            cx="31" 
-            cy="24" 
-            r="7" 
-            stroke="currentColor" 
-            stroke-width="4"
-          />
-          <path 
-            d="M57 17H75C78 17 79.6 20.5 77.6 22.7L71 30H57" 
-            stroke="currentColor" 
-            stroke-width="4" 
-            stroke-linecap="round" 
-            stroke-linejoin="round"
-          />
-          <path 
-            d="M62 30H75" 
-            stroke="currentColor" 
-            stroke-width="4" 
-            stroke-linecap="round"
-          />
+        <svg class="opener-icon" viewBox="0 0 80 140" aria-hidden="true">
+          <path fill="currentColor" fill-rule="evenodd" d="M28 4C16.4 4 7 13.4 7 25v14c0 15.1 10.8 27.8 25 30.8V112H22.5c-1.7 0-3 1.3-3 3v5c0 1.7 1.3 3 3 3h35c1.7 0 3-1.3 3-3v-5c0-1.7-1.3-3-3-3H48V69.8c14.2-3 25-15.7 25-30.8V25C73 13.4 63.6 4 52 4H28Zm6 18h12c6.1 0 11 4.9 11 11v5c0 6.1-4.9 11-11 11H34c-6.1 0-11-4.9-11-11v-5c0-6.1 4.9-11 11-11Zm-1.3 10C28.4 32 25 35.4 25 39.7v1.6c0 4.3 3.4 7.7 7.7 7.7H38l8.1-9.1c1.1-1.2 2.7-1.9 4.3-1.9H55v-5.3c0-1.5-1.2-2.7-2.7-2.7H32.7ZM40 87.5A7.5 7.5 0 1 0 40 102.5 7.5 7.5 0 0 0 40 87.5Z"/>
         </svg>
 
         <h2>Camareros<br>Camocha</h2>
@@ -596,7 +556,14 @@
 
       <div class="grid">
         <div class="card">
-          <span>1</span>
+          <span aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 3h10" />
+              <path d="M9 3v4l3 4 3-4V3" />
+              <path d="M12 11v8" />
+              <path d="M9 21h6" />
+            </svg>
+          </span>
           <h3>Servicio de barra</h3>
           <p>
             Atendemos la barra durante el evento, servimos bebidas, mantenemos el orden
@@ -605,7 +572,14 @@
         </div>
 
         <div class="card">
-          <span>2</span>
+          <span aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+              <path d="M5 21c1.2-3.7 4-5.5 7-5.5s5.8 1.8 7 5.5" />
+              <path d="M7 11l5 2 5-2" />
+              <path d="M12 13v3" />
+            </svg>
+          </span>
           <h3>Camareros para eventos</h3>
           <p>
             Ofrecemos camareros para reuniones familiares, celebraciones privadas,
@@ -614,7 +588,14 @@
         </div>
 
         <div class="card">
-          <span>3</span>
+          <span aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 3h4v18H6z" />
+              <path d="M14 5h4v16h-4z" />
+              <path d="M6 7h4" />
+              <path d="M14 9h4" />
+            </svg>
+          </span>
           <h3>Barra y bebidas para caterings</h3>
           <p>
             Trabajamos con caterings que ya ofrecen la parte de comida y necesitan que alguien
