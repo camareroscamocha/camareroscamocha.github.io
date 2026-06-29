@@ -3,9 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+ 
   <title>Camareros Camocha | Barra, bebidas y camareros en Madrid</title>
-
+ 
+  <!-- SEO básico -->
+  <meta name="description" content="Camareros, barra y gestión de bebidas para eventos privados y caterings en Madrid. Servicio flexible y presupuesto sin compromiso." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://camareroscamocha.github.io/" />
+ 
+  <!-- Open Graph (vista previa al compartir en WhatsApp / redes) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Camareros Camocha | Barra, bebidas y camareros en Madrid" />
+  <meta property="og:description" content="Servicio de camareros, barra y gestión de bebidas para eventos privados y caterings en Madrid." />
+  <meta property="og:url" content="https://camareroscamocha.github.io/" />
+  <meta property="og:image" content="https://camareroscamocha.github.io/hero-camocha.png" />
+  <meta property="og:locale" content="es_ES" />
+ 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Camareros Camocha | Barra, bebidas y camareros en Madrid" />
+  <meta name="twitter:description" content="Servicio de camareros, barra y gestión de bebidas para eventos privados y caterings en Madrid." />
+  <meta name="twitter:image" content="https://camareroscamocha.github.io/hero-camocha.png" />
+ 
+  <!-- Favicon simple en SVG (sustitúyelo por uno con tu logo si quieres) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 140'%3E%3Cpath fill='%230b4a45' fill-rule='evenodd' d='M28 4C16.4 4 7 13.4 7 25v14c0 15.1 10.8 27.8 25 30.8V112H22.5c-1.7 0-3 1.3-3 3v5c0 1.7 1.3 3 3 3h35c1.7 0 3-1.3 3-3v-5c0-1.7-1.3-3-3-3H48V69.8c14.2-3 25-15.7 25-30.8V25C73 13.4 63.6 4 52 4H28Zm6 18h12c6.1 0 11 4.9 11 11v5c0 6.1-4.9 11-11 11H34c-6.1 0-11-4.9-11-11v-5c0-6.1 4.9-11 11-11Zm-1.3 10C28.4 32 25 35.4 25 39.7v1.6c0 4.3 3.4 7.7 7.7 7.7H38l8.1-9.1c1.1-1.2 2.7-1.9 4.3-1.9H55v-5.3c0-1.5-1.2-2.7-2.7-2.7H32.7ZM40 87.5A7.5 7.5 0 1 0 40 102.5 7.5 7.5 0 0 0 40 87.5Z'/%3E%3C/svg%3E" />
+ 
+  <!-- Datos estructurados para SEO local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Camareros Camocha",
+    "description": "Servicio de camareros, barra y gestión de bebidas para eventos privados y caterings en Madrid.",
+    "url": "https://camareroscamocha.github.io/",
+    "telephone": "+34679556292",
+    "email": "leblicpedro@gmail.com",
+    "areaServed": {
+      "@type": "City",
+      "name": "Madrid"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Madrid",
+      "addressCountry": "ES"
+    },
+    "priceRange": "€€"
+  }
+  </script>
+ 
   <style>
     :root {
       --verde: #0b4a45;
@@ -16,24 +61,24 @@
       --gris: #666;
       --blanco: #ffffff;
     }
-
+ 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
+ 
     html {
       scroll-behavior: smooth;
     }
-
+ 
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: var(--beige);
       color: var(--texto);
       line-height: 1.6;
     }
-
+ 
     header {
       width: 100%;
       padding: 22px 8%;
@@ -47,7 +92,7 @@
       z-index: 20;
       border-bottom: 1px solid rgba(0,0,0,0.06);
     }
-
+ 
     .brand {
       display: flex;
       align-items: center;
@@ -55,7 +100,7 @@
       text-decoration: none;
       color: var(--verde);
     }
-
+ 
     .opener-icon {
       width: 28px;
       height: 46px;
@@ -63,7 +108,7 @@
       color: var(--verde);
       display: block;
     }
-
+ 
     .brand-text {
       display: flex;
       flex-direction: column;
@@ -73,7 +118,7 @@
       text-transform: uppercase;
       font-size: 15px;
     }
-
+ 
     nav a {
       text-decoration: none;
       color: var(--verde-oscuro);
@@ -81,11 +126,11 @@
       font-size: 15px;
       font-weight: 600;
     }
-
+ 
     nav a:hover {
       color: var(--verde);
     }
-
+ 
     .hero {
       position: relative;
       min-height: 760px;
@@ -98,7 +143,7 @@
       background:
         linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(247,243,234,0.95) 100%);
     }
-
+ 
     .hero::before {
       content: "";
       position: absolute;
@@ -109,7 +154,7 @@
       z-index: 2;
       pointer-events: none;
     }
-
+ 
     .hero::after {
       content: "";
       position: absolute;
@@ -126,14 +171,14 @@
       z-index: 3;
       pointer-events: none;
     }
-
+ 
     .hero > div:first-child {
       position: relative;
       z-index: 5;
       max-width: 850px;
       margin: 0 auto;
     }
-
+ 
     .hero-bg {
       position: absolute;
       left: 50%;
@@ -143,7 +188,7 @@
       z-index: 1;
       pointer-events: none;
     }
-
+ 
     .hero-bg img {
       width: 100%;
       height: auto;
@@ -151,7 +196,7 @@
       opacity: 0.78;
       filter: saturate(0.92) contrast(0.98);
     }
-
+ 
     .eyebrow {
       color: var(--verde);
       text-transform: uppercase;
@@ -160,7 +205,7 @@
       font-weight: 800;
       margin-bottom: 18px;
     }
-
+ 
     .hero h1 {
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(48px, 5.5vw, 82px);
@@ -169,7 +214,7 @@
       margin-bottom: 24px;
       max-width: 900px;
     }
-
+ 
     .hero p {
       font-size: 18px;
       line-height: 1.65;
@@ -177,14 +222,14 @@
       max-width: 720px;
       margin: 0 auto 30px;
     }
-
+ 
     .buttons {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 14px;
     }
-
+ 
     .btn {
       display: inline-block;
       padding: 15px 22px;
@@ -193,33 +238,29 @@
       font-weight: 800;
       transition: 0.2s ease;
     }
-
+ 
     .btn.primary {
       background: var(--verde);
       color: white;
     }
-
+ 
     .btn.secondary {
       background: rgba(255,255,255,0.5);
       color: var(--verde);
       border: 1px solid var(--verde);
     }
-
+ 
     .btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 22px rgba(0,0,0,0.12);
     }
-
-    .logo-card {
-      display: none;
-    }
-
+ 
     section {
       padding: 85px 8%;
       max-width: 1200px;
       margin: auto;
     }
-
+ 
     .section-title {
       color: var(--verde-oscuro);
       font-size: 42px;
@@ -227,24 +268,24 @@
       margin-bottom: 18px;
       font-family: Georgia, "Times New Roman", serif;
     }
-
+ 
     .section-intro {
       color: var(--gris);
       font-size: 19px;
       max-width: 800px;
       margin-bottom: 42px;
     }
-
+ 
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-
+ 
     .grid.two {
       grid-template-columns: repeat(2, 1fr);
     }
-
+ 
     .card {
       background: white;
       padding: 32px;
@@ -252,7 +293,7 @@
       box-shadow: 0 10px 28px rgba(0,0,0,0.06);
       border: 1px solid rgba(0,0,0,0.04);
     }
-
+ 
     .card span {
       display: inline-flex;
       width: 42px;
@@ -265,7 +306,7 @@
       font-weight: 900;
       margin-bottom: 22px;
     }
-
+ 
     .card span svg {
       width: 22px;
       height: 22px;
@@ -275,32 +316,32 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-
+ 
     .card h3 {
       color: var(--verde-oscuro);
       font-size: 23px;
       margin-bottom: 12px;
       font-family: Georgia, "Times New Roman", serif;
     }
-
+ 
     .card p {
       color: var(--gris);
     }
-
+ 
     .split {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
       gap: 52px;
       align-items: center;
     }
-
+ 
     .highlight-box {
       background: var(--verde-oscuro);
       color: white;
       padding: 44px;
       border-radius: 28px;
     }
-
+ 
     .highlight-box h2 {
       font-size: 36px;
       line-height: 1.1;
@@ -308,18 +349,18 @@
       color: white;
       font-family: Georgia, "Times New Roman", serif;
     }
-
+ 
     .highlight-box p {
       color: rgba(255,255,255,0.82);
       font-size: 18px;
       margin-bottom: 20px;
     }
-
+ 
     .list {
       display: grid;
       gap: 16px;
     }
-
+ 
     .list-item {
       display: flex;
       gap: 14px;
@@ -329,23 +370,23 @@
       border-radius: 18px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.05);
     }
-
+ 
     .check {
       color: var(--verde);
       font-weight: 900;
       font-size: 20px;
     }
-
+ 
     .process {
       background: white;
       max-width: none;
     }
-
+ 
     .process-inner {
       max-width: 1200px;
       margin: auto;
     }
-
+ 
     .contact {
       background: var(--verde);
       max-width: none;
@@ -353,39 +394,39 @@
       text-align: center;
       padding: 90px 8%;
     }
-
+ 
     .contact h2 {
       font-size: 44px;
       margin-bottom: 18px;
       color: white;
       font-family: Georgia, "Times New Roman", serif;
     }
-
+ 
     .contact p {
       color: rgba(255,255,255,0.84);
       font-size: 19px;
       max-width: 720px;
       margin: 0 auto 34px;
     }
-
+ 
     .contact-actions {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 14px;
     }
-
+ 
     .contact .btn.primary {
       background: white;
       color: var(--verde);
     }
-
+ 
     .contact .btn.secondary {
       border-color: white;
       color: white;
       background: transparent;
     }
-
+ 
     footer {
       background: var(--verde-oscuro);
       color: rgba(255,255,255,0.7);
@@ -393,92 +434,92 @@
       padding: 28px 8%;
       font-size: 14px;
     }
-
+ 
     @media (max-width: 950px) {
       header {
         flex-direction: column;
         gap: 18px;
       }
-
+ 
       nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 16px;
       }
-
+ 
       nav a {
         margin-left: 0;
       }
-
+ 
       .hero {
         min-height: 720px;
         padding-top: 70px;
       }
-
+ 
       .hero h1 {
         font-size: 46px;
       }
-
+ 
       .hero p {
         font-size: 17px;
       }
-
+ 
       .hero-bg {
         width: 1200px;
         bottom: -10px;
       }
-
+ 
       .grid,
       .grid.two {
         grid-template-columns: 1fr;
       }
-
+ 
       .split {
         grid-template-columns: 1fr;
       }
     }
-
+ 
     @media (max-width: 550px) {
       header {
         padding: 18px 6%;
       }
-
+ 
       .hero {
         padding: 58px 6% 0;
         min-height: 760px;
       }
-
+ 
       .hero h1 {
         font-size: 38px;
       }
-
+ 
       .hero p {
         font-size: 16px;
       }
-
+ 
       .hero-bg {
         width: 980px;
         bottom: -20px;
       }
-
+ 
       section {
         padding: 65px 6%;
       }
-
+ 
       .section-title {
         font-size: 34px;
       }
-
+ 
       .contact h2 {
         font-size: 36px;
       }
-
+ 
       .buttons,
       .contact-actions {
         flex-direction: column;
       }
-
+ 
       .btn {
         width: 100%;
         text-align: center;
@@ -486,21 +527,21 @@
     }
   </style>
 </head>
-
+ 
 <body>
-
+ 
   <header>
     <a class="brand" href="#">
       <svg class="opener-icon" viewBox="0 0 80 140" aria-hidden="true">
         <path fill="currentColor" fill-rule="evenodd" d="M28 4C16.4 4 7 13.4 7 25v14c0 15.1 10.8 27.8 25 30.8V112H22.5c-1.7 0-3 1.3-3 3v5c0 1.7 1.3 3 3 3h35c1.7 0 3-1.3 3-3v-5c0-1.7-1.3-3-3-3H48V69.8c14.2-3 25-15.7 25-30.8V25C73 13.4 63.6 4 52 4H28Zm6 18h12c6.1 0 11 4.9 11 11v5c0 6.1-4.9 11-11 11H34c-6.1 0-11-4.9-11-11v-5c0-6.1 4.9-11 11-11Zm-1.3 10C28.4 32 25 35.4 25 39.7v1.6c0 4.3 3.4 7.7 7.7 7.7H38l8.1-9.1c1.1-1.2 2.7-1.9 4.3-1.9H55v-5.3c0-1.5-1.2-2.7-2.7-2.7H32.7ZM40 87.5A7.5 7.5 0 1 0 40 102.5 7.5 7.5 0 0 0 40 87.5Z"/>
       </svg>
-
+ 
       <div class="brand-text">
         <span>Camareros</span>
         <span>Camocha</span>
       </div>
     </a>
-
+ 
     <nav>
       <a href="#servicio">Servicio</a>
       <a href="#clientes">Clientes</a>
@@ -508,52 +549,42 @@
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
-
+ 
   <main>
-
+ 
     <section class="hero">
       <div>
         <div class="eyebrow">Barra · Bebidas · Camareros</div>
-
+ 
         <h1>Servicio de camareros y barra para eventos privados y caterings.</h1>
-
+ 
         <p>
           En Camareros Camocha ofrecemos personal de barra, servicio de bebidas y camareros
           para fiestas privadas, reuniones familiares y eventos en Madrid. También trabajamos
           con caterings que quieran delegar la barra, la gestión de bebidas y el servicio de camareros
           en sus eventos.
         </p>
-
+ 
         <div class="buttons">
           <a class="btn primary" href="#contacto">Pedir presupuesto</a>
           <a class="btn secondary" href="#servicio">Ver servicio</a>
         </div>
       </div>
-
+ 
       <div class="hero-bg" aria-hidden="true">
-        <img src="hero-camocha.png" alt="" />
-      </div>
-
-      <div class="logo-card">
-        <svg class="opener-icon" viewBox="0 0 80 140" aria-hidden="true">
-          <path fill="currentColor" fill-rule="evenodd" d="M28 4C16.4 4 7 13.4 7 25v14c0 15.1 10.8 27.8 25 30.8V112H22.5c-1.7 0-3 1.3-3 3v5c0 1.7 1.3 3 3 3h35c1.7 0 3-1.3 3-3v-5c0-1.7-1.3-3-3-3H48V69.8c14.2-3 25-15.7 25-30.8V25C73 13.4 63.6 4 52 4H28Zm6 18h12c6.1 0 11 4.9 11 11v5c0 6.1-4.9 11-11 11H34c-6.1 0-11-4.9-11-11v-5c0-6.1 4.9-11 11-11Zm-1.3 10C28.4 32 25 35.4 25 39.7v1.6c0 4.3 3.4 7.7 7.7 7.7H38l8.1-9.1c1.1-1.2 2.7-1.9 4.3-1.9H55v-5.3c0-1.5-1.2-2.7-2.7-2.7H32.7ZM40 87.5A7.5 7.5 0 1 0 40 102.5 7.5 7.5 0 0 0 40 87.5Z"/>
-        </svg>
-
-        <h2>Camareros<br>Camocha</h2>
-        <div class="logo-line"></div>
-        <p>Barra · Bebidas · Servicio</p>
+        <img src="hero-camocha.png" alt="Camareros sirviendo en barra durante un evento privado en Madrid" width="1500" height="800" />
       </div>
     </section>
-
+ 
     <section id="servicio">
       <h2 class="section-title">Un servicio pensado para cubrir la parte de barra, bebidas y atención.</h2>
-
+ 
       <p class="section-intro">
         Nos encargamos de aportar camareros responsables y organizados para que el evento funcione
         de forma cómoda. Podemos atender una barra, servir bebidas, dar servicio durante una comida o cena
         y encargarnos de la gestión de bebidas para caterings que quieran externalizar esa parte del evento.
       </p>
-
+ 
       <div class="grid">
         <div class="card">
           <span aria-hidden="true">
@@ -570,7 +601,7 @@
             y cuidamos que los invitados estén bien atendidos.
           </p>
         </div>
-
+ 
         <div class="card">
           <span aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -586,7 +617,7 @@
             cenas, cumpleaños, fiestas en casa o eventos en finca.
           </p>
         </div>
-
+ 
         <div class="card">
           <span aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -604,15 +635,15 @@
         </div>
       </div>
     </section>
-
+ 
     <section id="clientes">
       <h2 class="section-title">Trabajamos tanto con particulares como con caterings.</h2>
-
+ 
       <p class="section-intro">
         Nuestra idea es ser flexibles: podemos encargarnos directamente de la barra de una celebración privada,
         o asumir para un catering toda la parte de bebidas, barra y camareros dentro de un evento.
       </p>
-
+ 
       <div class="grid two">
         <div class="card">
           <span>A</span>
@@ -623,7 +654,7 @@
             pendiente de atender a todo el mundo.
           </p>
         </div>
-
+ 
         <div class="card">
           <span>B</span>
           <h3>Para caterings</h3>
@@ -634,7 +665,7 @@
         </div>
       </div>
     </section>
-
+ 
     <section id="no-somos-catering">
       <div class="split">
         <div class="highlight-box">
@@ -648,7 +679,7 @@
             que la barra funcione, que las bebidas estén atendidas y que los invitados reciban un buen servicio.
           </p>
         </div>
-
+ 
         <div class="list">
           <div class="list-item">
             <div class="check">✓</div>
@@ -657,7 +688,7 @@
               <p>Servicio de barra, preparación básica de copas y atención de bebidas durante el evento.</p>
             </div>
           </div>
-
+ 
           <div class="list-item">
             <div class="check">✓</div>
             <div>
@@ -665,7 +696,7 @@
               <p>Personal para servir, recoger, ordenar y hacer que el evento fluya mejor.</p>
             </div>
           </div>
-
+ 
           <div class="list-item">
             <div class="check">✓</div>
             <div>
@@ -673,7 +704,7 @@
               <p>Fiestas, reuniones familiares, celebraciones en casa, fincas o espacios privados.</p>
             </div>
           </div>
-
+ 
           <div class="list-item">
             <div class="check">✓</div>
             <div>
@@ -684,16 +715,16 @@
         </div>
       </div>
     </section>
-
+ 
     <section id="como-funciona" class="process">
       <div class="process-inner">
         <h2 class="section-title">Cómo funciona</h2>
-
+ 
         <p class="section-intro">
           Cuéntanos qué necesitas y preparamos una propuesta sencilla según el tipo de evento,
           el número de personas, el horario y el servicio que haga falta.
         </p>
-
+ 
         <div class="grid">
           <div class="card">
             <span>1</span>
@@ -703,7 +734,7 @@
               camareros, gestión de bebidas o una solución para tu catering.
             </p>
           </div>
-
+ 
           <div class="card">
             <span>2</span>
             <h3>Definimos el servicio</h3>
@@ -712,7 +743,7 @@
               o coordinación con el catering del evento.
             </p>
           </div>
-
+ 
           <div class="card">
             <span>3</span>
             <h3>Te damos presupuesto</h3>
@@ -724,31 +755,32 @@
         </div>
       </div>
     </section>
-
+ 
     <section id="contacto" class="contact">
       <h2>¿Necesitas camareros, barra o gestión de bebidas en Madrid?</h2>
-
+ 
       <p>
         Escríbenos y cuéntanos qué estás organizando. Te responderemos con disponibilidad
         y una propuesta adaptada a tu evento privado o servicio de catering.
       </p>
-
+ 
       <div class="contact-actions">
         <a class="btn primary" href="mailto:leblicpedro@gmail.com">
           Enviar email
         </a>
-
-        <a class="btn secondary" href="https://wa.me/34679556292" target="_blank">
+ 
+        <a class="btn secondary" href="https://wa.me/34679556292" target="_blank" rel="noopener">
           Escribir por WhatsApp
         </a>
       </div>
     </section>
-
+ 
   </main>
-
+ 
   <footer>
     <p>© 2026 Camareros Camocha · Barra, bebidas y camareros para eventos privados y caterings en Madrid</p>
   </footer>
-
+ 
 </body>
 </html>
+ 
